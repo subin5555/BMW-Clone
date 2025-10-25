@@ -1,207 +1,284 @@
+/* ==========================
+   GLOBAL STYLES
+========================== */
 * {
-  font-family: "Libertinus Mono", monospace;
-  padding: 0;
+  font-family: "Open Sans", "Roboto Condensed", "Libertinus Mono", sans-serif;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+:root {
+  --primary: rgb(9, 92, 234);
+  --light: #fff;
+  --dark: #000;
+  --gray: #f8f9fa;
+}
+
+/* ==========================
+   NAVBAR
+========================== */
 .navbar-brand {
   display: flex;
-
+  align-items: center;
 }
 
 .slogan {
   padding-top: 8px;
   padding-left: 10px;
-}
-
-:root {
-  --brown: rgb(252, 253, 254);
+  font-size: 0.9rem;
+  color: #333;
 }
 
 #buttonBTN {
-  background-color: var(--brown);
-  color: rgb(11, 0, 0);
+  background-color: var(--light);
+  color: var(--dark);
+  border: none;
+  transition: 0.3s ease;
 }
 
 #buttonBTN:hover {
-  background-color: rgb(9, 92, 234);
-
-  color: var(--brown);
-
-}
-
-
-@media(max-width:992px) {
-  .nav-item i {
-    display: none;
-  }
+  background-color: var(--primary);
+  color: var(--light);
 }
 
 .nav-item:hover {
-  background-color: rgb(9, 92, 234);
-
-
+  background-color: var(--primary);
+  transition: 0.3s;
 }
 
+.navbar-nav .nav-link {
+  color: #000;
+  font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--light);
+}
+
+/* ==========================
+   SECTION 1
+========================== */
 #section1 {
-  /* padding-left: 735px;
-    padding-top: 80px; */
-  background-color: whitesmoke;
-
-}
-
-.img-section {
-  padding-left: 735px;
-  padding-top: 80px;
-
-}
-
-
-/* #main {
-    background-image: url(./bg-image\ -\ Copy.jpg);
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-} */
-.text-section {
-
+  background-color: var(--gray);
+  padding: 80px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   text-align: left;
-
-
 }
 
-#section2 {
-  text-decoration: none;
-
-}
-
-
-#section3 {
-  padding: 150px;
+.img-section img {
   width: 100%;
-  height: 100vh;
+  max-width: 800px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.text-section {
+  margin-top: 20px;
+}
+
+.text-section h4 {
+  color: var(--primary);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.text-section h2 {
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+/* ==========================
+   SECTION 2 (CARDS)
+========================== */
+#section2 .card {
+  border: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+#section2 .card:hover {
+  transform: scale(1.03);
+}
+
+/* ==========================
+   SECTION 3 (IMAGE GRID)
+========================== */
+#section3 {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+#section3 .head-section {
+  font-weight: 800;
+  margin-bottom: 50px;
 }
 
 .box {
-  width: 200px;
-  height: 300px;
-  background-color: rgb(241, 237, 237);
-  font-size: 15px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
   transition: all 0.3s ease;
 }
 
 .box:hover {
-  width: 210px;
-  height:450px;
-  .rectangle{
-  padding: 100px;
+  transform: scale(1.05);
 }
-}
-@media(min-width:1000px){
-  .head-section4{
-    margin-left: 150px;
-    margin-top: 150px;
-  }
-}
-  
- 
-  
 
-#section5{
-  margin-bottom: 50px;
+/* ==========================
+   SECTION 4 / 5
+========================== */
+#section5 {
+  margin-bottom: 80px;
 }
-/* .head-section5{
-  width:200px;
 
-} */
-#sector{
-  text-decoration: none;
+#sector {
   list-style: none;
-  font-size: 30px;
+  font-size: 2rem;
   font-weight: 800;
-
+  padding-left: 0;
 }
-#para1{
-  width:300px;
-  font-weight: 700;
+
+#para1 {
+  max-width: 400px;
+  font-weight: 600;
 }
-/* #section5 h4{
-  width:250px;
-  font-weight: 800;
-} */
-/* .sector-2{
-  padding:50px;
 
-  
-} */
-/* #section5 sector-2{
-  padding-bottom: 20%;
-} */
-/* .sector-2 h4{
-  font-weight: 300;
-  font-size: 15px;
-  
-} */
+button {
+  background-color: var(--primary);
+  color: var(--light);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
 
-#sector-3 h1{
-  padding: 50px;
+button:hover {
+  background-color: #0748b4;
+}
+
+/* ==========================
+   SECTION 6 (HEADERS, LINKS)
+========================== */
+#sector-3 h1 {
+  padding: 50px 0 10px;
   text-align: center;
-  font-size: 60px;
+  font-size: 2.5rem;
   font-weight: 800;
 }
-.headsector{
+
+.headsector {
   color: black;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 1.2rem;
   font-weight: 700;
-  
+  display: block;
+  text-align: center;
+  margin-bottom: 40px;
 }
-/* .linksector{
-  text-decoration: none;
-} */
- .headlink{
+
+.headlink {
   text-decoration: none;
   color: black;
   font-weight: 600;
-  
- }
- .headlink h4{
-  width:500px;
- }
- .sector4-head{
-  text-align: center;
-  font-size: 45px;
-  font-weight: 800;
-  padding-top: 50px;
- }
- .head-footer{
-  padding-top: 30px;
-  background-color: #0c0c0cdb;
-  height: 100vh;
-  color: white;
-  width:100%;
-  margin: 0;
- 
- }
- .language-head{
+}
+
+.headlink:hover {
+  color: var(--primary);
+}
+
+/* ==========================
+   FOOTER
+========================== */
+.head-footer {
+  background-color: rgba(12, 12, 12, 0.85);
+  color: var(--light);
+  padding: 40px 20px;
+}
+
+.language-head {
   display: flex;
-  justify-content: space-around;
-  padding:5px 2px;
-  text-decoration: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
   list-style: none;
- }
- .language{
-  padding:60px;
- }
- .language-1{
+  padding: 10px 0;
+  font-weight: 600;
+}
 
-  padding:35px;
- }
- 
- .bmwhead{
-  padding:25px;
- }
+.bmwhead {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
 
- 
+.language,
+.language-1 {
+  list-style: none;
+  padding-left: 0;
+  line-height: 2;
+}
+
+
+@media (max-width: 992px) {
+  .img-section {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .text-section {
+    text-align: center;
+  }
+
+  #section2 .card {
+    width: 100% !important;
+    margin-bottom: 30px;
+  }
+
+  .col-6, .col-md-6 {
+    width: 100%;
+  }
+
+  #section3 .row > div {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  #sector-3 h1 {
+    font-size: 2rem;
+  }
+}
+
+
+@media (max-width: 576px) {
+  #section3 {
+    padding: 50px 10px;
+  }
+
+  #section3 .row > div {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .text-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .text-section h4 {
+    font-size: 1rem;
+  }
+
+  .bmwhead {
+    font-size: 1.1rem;
+  }
+
+  .head-footer {
+    text-align: center;
+  }
+
+  .language {
+    padding: 20px;
+  }
+}
